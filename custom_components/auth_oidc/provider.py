@@ -11,10 +11,8 @@ import voluptuous as vol
 from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import HomeAssistantError
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
-from homeassistant.helpers.config_entry_oauth2_flow import (
-    LocalOAuth2Implementation,
-    async_register_view,
-)
+from homeassistant.helpers.config_entry_oauth2_flow import LocalOAuth2Implementation
+from ./callback.py import async_register_view
 
 from . import AUTH_PROVIDER_SCHEMA, AUTH_PROVIDERS, AuthProvider, LoginFlow
 from ..models import Credentials, UserMeta
